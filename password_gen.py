@@ -6,7 +6,7 @@ import tkinter as tk
 window = tk.Tk()
 window.title('Password Generator')
 window.resizable(False, False)
-window.geometry(500, 400)
+window.geometry('500x300')
 # Frame: Base frame to hold all other frames
 
 # Frame: Generate Password
