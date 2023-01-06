@@ -3,6 +3,8 @@ import tkinter as tk
 # Event Handlers
 
 # New Window
+window = tk.Tk()
+window.title('Password Generator')
 # Frame: Base frame to hold all other frames
 
 # Frame: Generate Password
