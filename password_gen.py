@@ -6,9 +6,12 @@ import tkinter as tk
 window = tk.Tk()
 window.title('Password Generator')
 window.resizable(False, False)
-window.geometry('500x300')
 # Frame: Base frame to hold all other frames
-
+baseFrame = tk.Frame(master=window,
+                     height=300,
+                     width=500,
+                     bg='dark grey')
+baseFrame.pack(fill=tk.BOTH)
 # Frame: Generate Password
 # Button: Copy Password
 # Label: Display Password
