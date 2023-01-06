@@ -24,3 +24,4 @@ window.geometry(500, 400)
 # Checkboxes: Symbols to be Included in Password
 
 # Execute Mainloop
+window.mainloop()
