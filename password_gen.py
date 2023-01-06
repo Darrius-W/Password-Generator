@@ -12,7 +12,13 @@ baseFrame = tk.Frame(master=window,
                      width=500,
                      bg='dark grey')
 baseFrame.pack(fill=tk.BOTH)
+
 # Frame: Generate Password
+generatorFrame = tk.Frame(master=baseFrame,
+                          height=100,
+                          width=500,
+                          bg='green')
+generatorFrame.pack(fill=tk.X)
 # Button: Copy Password
 # Label: Display Password
 # Button: Generate New Password
