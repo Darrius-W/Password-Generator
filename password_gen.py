@@ -20,6 +20,8 @@ generatorFrame = tk.Frame(master=baseFrame,
                           bg='green')
 generatorFrame.pack(fill=tk.X)
 # Button: Copy Password
+copyBtn = tk.Button(master=generatorFrame, text='Copy')
+copyBtn.pack()
 # Label: Display Password
 # Button: Generate New Password
 
