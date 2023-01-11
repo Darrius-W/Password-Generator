@@ -77,7 +77,10 @@ digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", onvalue=1, offva
 digitsCBox.pack(side=tk.LEFT)
 #Punctuation
 puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", onvalue=1, offvalue=0)
-puncCBox.pack()
+puncCBox.pack(side=tk.LEFT)
+#Uppercase
+upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", onvalue=1, offvalue=0)
+upperCBox.pack(side=tk.LEFT)
 
 
 # Execute Mainloop
