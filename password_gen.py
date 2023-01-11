@@ -68,6 +68,9 @@ symbolsHdrLabel.pack(side=tk.LEFT)
 
 
 # Frame: Symbols Included in Password
+symbolsFrame = tk.Frame(master=baseFrame, height=100, width=500)
+symbolsFrame.pack(fill=tk.X)
+
 # Label: Widget Header
 # Checkboxes: Symbols to be Included in Password
 
