@@ -41,8 +41,8 @@ lengthHdrFrame = tk.Frame(master=baseFrame, height=50, width=500)
 lengthHdrFrame.pack(fill=tk.X)
 
 # Label: Widget Header
-lengthLabel = tk.Label(master=lengthHdrFrame, text='\nLength:')
-lengthLabel.pack(side=tk.LEFT)
+lengthHdrLabel = tk.Label(master=lengthHdrFrame, text='\nLength:')
+lengthHdrLabel.pack(side=tk.LEFT)
 
 
 # Frame: Length of Password
@@ -61,6 +61,10 @@ manLengthEntry.pack(side=tk.LEFT)
 # Frame: Symbols Header
 symbolsHdrFrame = tk.Frame(master=baseFrame, height=50, width=500)
 symbolsHdrFrame.pack(fill=tk.X)
+
+# Label: Symbols header label
+symbolsHdrLabel = tk.Label(master=symbolsHdrFrame, text="\nSymbols:")
+symbolsHdrLabel.pack(side=tk.LEFT)
 
 
 # Frame: Symbols Included in Password
