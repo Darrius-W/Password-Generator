@@ -42,6 +42,8 @@ lengthFrame.pack(fill=tk.X)
 lengthLabel = tk.Label(master=lengthFrame, text='\nLength:\n')
 lengthLabel.pack(side=tk.LEFT)
 # Slider: Adjust length of Generated Password
+lengthSlider = tk.Scale(master=lengthFrame, from_=0, to=50, orient='horizontal')
+lengthSlider.pack()
 # Label: Hold Current Value of the Slider
 
 # Frame: Symbols Included in Password
