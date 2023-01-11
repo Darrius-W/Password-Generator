@@ -50,7 +50,7 @@ lengthFrame = tk.Frame(master=baseFrame, height=100, width=500)
 lengthFrame.pack(fill=tk.X)
 
 # Slider: Adjust length of Generated Password
-lengthSlider = tk.Scale(master=lengthFrame, from_=0, to=50, orient='horizontal')
+lengthSlider = tk.Scale(master=lengthFrame, from_=0, to=50, orient='horizontal', showvalue=False)
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Hold Current Value of the Slider, and manually input length value
