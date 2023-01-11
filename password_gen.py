@@ -72,8 +72,12 @@ symbolsFrame = tk.Frame(master=baseFrame, height=100, width=500)
 symbolsFrame.pack(fill=tk.X)
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
+#Digits
 digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", onvalue=1, offvalue=0)
 digitsCBox.pack(side=tk.LEFT)
+#Punctuation
+puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", onvalue=1, offvalue=0)
+puncCBox.pack()
 
 
 # Execute Mainloop
