@@ -58,6 +58,11 @@ manLengthEntry = tk.Entry(master=lengthFrame, width=4)
 manLengthEntry.pack(side=tk.LEFT)
 
 
+# Frame: Symbols Header
+symbolsHdrFrame = tk.Frame(master=baseFrame, height=50, width=500)
+symbolsHdrFrame.pack(fill=tk.X)
+
+
 # Frame: Symbols Included in Password
 # Label: Widget Header
 # Checkboxes: Symbols to be Included in Password
