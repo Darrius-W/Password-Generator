@@ -81,6 +81,9 @@ puncCBox.pack(side=tk.LEFT)
 #Uppercase
 upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", onvalue=1, offvalue=0)
 upperCBox.pack(side=tk.LEFT)
+#Lowercase
+lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", onvalue=1, offvalue=0)
+lowerCBox.pack(side=tk.LEFT)
 
 
 # Execute Mainloop
