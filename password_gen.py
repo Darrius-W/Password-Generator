@@ -71,8 +71,10 @@ symbolsHdrLabel.pack(side=tk.LEFT)
 symbolsFrame = tk.Frame(master=baseFrame, height=100, width=500)
 symbolsFrame.pack(fill=tk.X)
 
-# Label: Widget Header
-# Checkboxes: Symbols to be Included in Password
+# Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
+digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", onvalue=1, offvalue=0)
+digitsCBox.pack(side=tk.LEFT)
+
 
 # Execute Mainloop
 window.mainloop()
