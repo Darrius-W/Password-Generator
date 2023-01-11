@@ -35,6 +35,8 @@ refreshPwd = tk.Button(master=generatorFrame, text="Refresh")
 refreshPwd.pack(side=tk.LEFT)
 
 # Frame: Length of Password
+lengthFrame = tk.Frame(master=baseFrame, height=100, width=500)
+lengthFrame.pack(fill=tk.X)
 # Label: Widget Header
 # Slider: Adjust length of Generated Password
 # Label: Hold Current Value of the Slider
