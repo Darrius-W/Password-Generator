@@ -19,9 +19,11 @@ generatorFrame = tk.Frame(master=baseFrame,
                           width=500,
                           bg='green')
 generatorFrame.pack(fill=tk.X)
+
 # Button: Copy Password
 copyBtn = tk.Button(master=generatorFrame, text='Copy')
 copyBtn.pack(side=tk.LEFT)
+
 # Label: Display Password
 pwdLabel = tk.Label(master=generatorFrame,
                     width=20,
@@ -29,6 +31,8 @@ pwdLabel = tk.Label(master=generatorFrame,
                     bg='yellow')
 pwdLabel.pack(side=tk.LEFT)
 # Button: Generate New Password
+refreshPwd = tk.Button(master=generatorFrame, text="Refresh")
+refreshPwd.pack(side=tk.LEFT)
 
 # Frame: Length of Password
 # Label: Widget Header
