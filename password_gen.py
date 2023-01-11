@@ -30,20 +30,29 @@ pwdLabel = tk.Label(master=generatorFrame,
                     text='.............................',
                     bg='yellow')
 pwdLabel.pack(side=tk.LEFT)
+
 # Button: Generate New Password
 refreshPwd = tk.Button(master=generatorFrame, text="Refresh")
 refreshPwd.pack(side=tk.LEFT)
 
-# Frame: Length of Password
-lengthFrame = tk.Frame(master=baseFrame, height=100, width=500)
-lengthFrame.pack(fill=tk.X)
+
+# Frame: Header for Length of Password
+lengthHdrFrame = tk.Frame(master=baseFrame, height=50, width=500)
+lengthHdrFrame.pack(fill=tk.X)
 
 # Label: Widget Header
-lengthLabel = tk.Label(master=lengthFrame, text='\nLength:\n')
+lengthLabel = tk.Label(master=lengthHdrFrame, text='\nLength:')
 lengthLabel.pack(side=tk.LEFT)
+
+
+# Frame: Length of Password
+lengthFrame = tk.Frame(master=baseFrame, height=100, width=500)
+lengthFrame.pack(side=tk.LEFT)
+
 # Slider: Adjust length of Generated Password
 lengthSlider = tk.Scale(master=lengthFrame, from_=0, to=50, orient='horizontal')
 lengthSlider.pack(side=tk.LEFT)
+
 # Entry: Hold Current Value of the Slider, and manually input length value
 manLengthEntry = tk.Entry(master=lengthFrame, width=4)
 manLengthEntry.pack(side=tk.LEFT)
