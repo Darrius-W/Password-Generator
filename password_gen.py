@@ -113,16 +113,16 @@ symbolsFrame.pack(fill=tk.X)
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
 #Digits
-digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", onvalue=1, offvalue=0)
+digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", variable=cDigits, onvalue=1, offvalue=0)
 digitsCBox.pack(side=tk.LEFT)
 #Punctuation
-puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", onvalue=1, offvalue=0)
+puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", variable=cPunc, onvalue=1, offvalue=0)
 puncCBox.pack(side=tk.LEFT)
 #Uppercase
-upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", onvalue=1, offvalue=0)
+upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", variable=cUpper, onvalue=1, offvalue=0)
 upperCBox.pack(side=tk.LEFT)
 #Lowercase
-lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", onvalue=1, offvalue=0)
+lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", variable=cLower, onvalue=1, offvalue=0)
 lowerCBox.pack(side=tk.LEFT)
 
 
