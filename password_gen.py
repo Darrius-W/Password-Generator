@@ -1,6 +1,11 @@
 import tkinter as tk
 
 # Event Handlers
+# Generate Password
+# Display Password
+# Copy Password
+# Get Password Length
+# Confirm included symbols 
 
 # New Window
 window = tk.Tk()
