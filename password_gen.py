@@ -61,7 +61,7 @@ pwdLabel = tk.Label(master=generatorFrame,
 pwdLabel.pack(side=tk.LEFT)
 
 # Button: Generate New Password
-refreshPwd = tk.Button(master=generatorFrame, text="Refresh")
+refreshPwd = tk.Button(master=generatorFrame, text="Refresh", command=genPassword)
 refreshPwd.pack(side=tk.LEFT)
 
 
