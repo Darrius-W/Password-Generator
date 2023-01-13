@@ -20,22 +20,28 @@ def genPassword():
     secretsGen = secrets.SystemRandom()
     randomPwd = secretsGen.sample(defaultSyms, defaultLen) 
     # Send generated password to display function
-    print(randomPwd)
+    displayPwd(randomPwd)
+
 # Display Password
+def displayPwd(pwd):
+    print(pwd)
 # Copy Password
 # Get Password Length
 # Confirm included symbols 
+
 
 # New Window
 window = tk.Tk()
 window.title('Password Generator')
 window.resizable(False, False)
+
 # Frame: Base frame to hold all other frames
 baseFrame = tk.Frame(master=window,
                      height=300,
                      width=500,
                      bg='dark grey')
 baseFrame.pack(fill=tk.BOTH)
+
 
 # Frame: Generate Password
 generatorFrame = tk.Frame(master=baseFrame,
