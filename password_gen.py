@@ -1,5 +1,6 @@
 import tkinter as tk
 import string
+import secrets
 
 # All possible symbols
 digits = list(string.digits)
@@ -10,10 +11,16 @@ punc = list(string.punctuation)
 
 # Event Handlers
 # Generate Password
+def genPassword():
     # Call symbol function to see which symbol lists to use
+    defaultSyms = lowercase + digits
     # Call length function to get length to use
+    defaultLen = 16
     # Using requested symbols & length, generate password
+    secretsGen = secrets.SystemRandom()
+    randomPwd = secretsGen.sample(defaultSyms, defaultLen) 
     # Send generated password to display function
+    print(randomPwd)
 # Display Password
 # Copy Password
 # Get Password Length
