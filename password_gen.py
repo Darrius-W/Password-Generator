@@ -2,7 +2,7 @@ import tkinter as tk
 import string
 
 # All possible symbols
-
+digits = list(string.digits)
 
 
 # Event Handlers
