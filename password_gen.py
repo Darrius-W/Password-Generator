@@ -1,4 +1,9 @@
 import tkinter as tk
+import string
+
+# All possible symbols
+
+
 
 # Event Handlers
 # Generate Password
