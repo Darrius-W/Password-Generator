@@ -28,6 +28,10 @@ def displayPwd(pwd):
 # Copy Password
 # Get Password Length
 # Confirm included symbols 
+def includedSymbols():
+    # Check what symbols are marked
+    # Create super list based on what symbols are checked
+    # Pass super list to genPassword
 
 
 # New Window
