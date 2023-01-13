@@ -8,6 +8,12 @@ uppercase = list(string.ascii_uppercase)
 lowercase = list(string.ascii_lowercase)
 punc = list(string.punctuation)
 
+# Checked variables
+cDigits = tk.IntVar()
+cUpper = tk.IntVar()
+cLower = tk.IntVar()
+cPunc = tk.IntVar()
+
 
 # Event Handlers
 # Generate Password
@@ -30,6 +36,7 @@ def displayPwd(pwd):
 # Confirm included symbols 
 def includedSymbols():
     # Check what symbols are marked
+    if 
     # Create super list based on what symbols are checked
     # Pass super list to genPassword
 
