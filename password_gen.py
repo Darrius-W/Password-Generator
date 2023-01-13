@@ -24,7 +24,7 @@ def genPassword():
 
 # Display Password
 def displayPwd(pwd):
-    print(pwd)
+    pwdLabel['text'] = pwd
 # Copy Password
 # Get Password Length
 # Confirm included symbols 
