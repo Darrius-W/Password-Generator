@@ -5,6 +5,7 @@ import string
 digits = list(string.digits)
 uppercase = list(string.ascii_uppercase)
 lowercase = list(string.ascii_lowercase)
+punc = list(string.punctuation)
 
 
 
