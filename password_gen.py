@@ -3,6 +3,8 @@ import string
 
 # All possible symbols
 digits = list(string.digits)
+uppercase = list(string.ascii_uppercase)
+
 
 
 # Event Handlers
