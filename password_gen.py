@@ -8,10 +8,12 @@ lowercase = list(string.ascii_lowercase)
 punc = list(string.punctuation)
 
 
-
-
 # Event Handlers
 # Generate Password
+    # Call symbol function to see which symbol lists to use
+    # Call length function to get length to use
+    # Using requested symbols & length, generate password
+    # Send generated password to display function
 # Display Password
 # Copy Password
 # Get Password Length
