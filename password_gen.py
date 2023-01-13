@@ -4,6 +4,8 @@ import string
 # All possible symbols
 digits = list(string.digits)
 uppercase = list(string.ascii_uppercase)
+lowercase = list(string.ascii_lowercase)
+
 
 
 
