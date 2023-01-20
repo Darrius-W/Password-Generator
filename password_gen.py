@@ -14,11 +14,12 @@ punc = string.punctuation
 def genPassword():
     # Call symbol function to see which symbol lists to use
     includedSyms = includedSymbols()
+    print(includedSyms)
     # Call length function to get length to use
     defaultLen = 16
     # Using requested symbols & length, generate password
     secretsGen = secrets.SystemRandom()
-    randomPwd = secretsGen.sample(defaultSyms, defaultLen) 
+    randomPwd = secretsGen.sample(includedSyms, defaultLen) 
     # Send generated password to display function
     displayPwd(randomPwd)
 
@@ -32,10 +33,18 @@ def includedSymbols():
     syms = str()
     # Check what symbols are marked
     # Create super list based on what symbols are checked
-    if cDigits == 1: syms += cDigits.get()
-    if cUpper == 1: syms += cUpper.get()
-    if cLower == 1: syms += cLower.get()
-    if cPunc == 1: syms += cPunc.get()
+    if cDigits == 1:
+        cDigits.set(digits)
+        syms += cDigits.get()
+    if cUpper == 1:
+        cUpper.set(uppercase)
+        syms += cUpper.get()
+    if cLower == 1:
+        cLower.set(lowercase)
+        syms += cLower.get()
+    if cPunc == 1:
+        cPunc.set(punc)
+        syms += cPunc.get()
     # Pass super list to genPassword
     return syms
 
