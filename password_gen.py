@@ -3,16 +3,17 @@ import string
 import secrets
 
 # All possible symbols
-digits = list(string.digits)
-uppercase = list(string.ascii_uppercase)
-lowercase = list(string.ascii_lowercase)
-punc = list(string.punctuation)
+digits = string.digits
+uppercase = string.ascii_uppercase
+lowercase = string.ascii_lowercase
+punc = string.punctuation
 
 # Checked variables
-cDigits = tk.IntVar()
+'''cDigits = tk.IntVar()
+cDigits.set("1")
 cUpper = tk.IntVar()
 cLower = tk.IntVar()
-cPunc = tk.IntVar()
+cPunc = tk.IntVar()'''
 
 
 # Event Handlers
@@ -34,9 +35,8 @@ def displayPwd(pwd):
 # Copy Password
 # Get Password Length
 # Confirm included symbols 
-def includedSymbols():
+#def includedSymbols():
     # Check what symbols are marked
-    if 
     # Create super list based on what symbols are checked
     # Pass super list to genPassword
 
@@ -113,16 +113,19 @@ symbolsFrame.pack(fill=tk.X)
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
 #Digits
-digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", variable=cDigits, onvalue=1, offvalue=0)
+cDigits = tk.StringVar()
+cDigits.set("1")
+digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", variable=cDigits)
 digitsCBox.pack(side=tk.LEFT)
+print(cDigits.get())
 #Punctuation
-puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", variable=cPunc, onvalue=1, offvalue=0)
+puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", onvalue=1, offvalue=0)
 puncCBox.pack(side=tk.LEFT)
 #Uppercase
-upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", variable=cUpper, onvalue=1, offvalue=0)
+upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", onvalue=1, offvalue=0)
 upperCBox.pack(side=tk.LEFT)
 #Lowercase
-lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", variable=cLower, onvalue=1, offvalue=0)
+lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", onvalue=1, offvalue=0)
 lowerCBox.pack(side=tk.LEFT)
 
 
