@@ -120,13 +120,13 @@ cPunc.set(punc)
 digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", variable=cDigits)
 digitsCBox.pack(side=tk.LEFT)
 #Punctuation
-puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", onvalue=1, offvalue=0)
+puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", variable=cPunc)
 puncCBox.pack(side=tk.LEFT)
 #Uppercase
-upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", onvalue=1, offvalue=0)
+upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", variable=cUpper)
 upperCBox.pack(side=tk.LEFT)
 #Lowercase
-lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", onvalue=1, offvalue=0)
+lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", variable=cLower)
 lowerCBox.pack(side=tk.LEFT)
 
 
