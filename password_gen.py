@@ -14,12 +14,13 @@ punc = string.punctuation
 def genPassword():
     # Call symbol function to see which symbol lists to use
     includedSyms = includedSymbols()
-    print(includedSyms)
-    # Call length function to get length to use
-    defaultLen = 16
-    # Using requested symbols & length, generate password
-    secretsGen = secrets.SystemRandom()
-    randomPwd = secretsGen.sample(includedSyms, defaultLen) 
+    if includedSyms == '': randomPwd = 'Need to select Symbols!'  
+    else:
+        # Call length function to get length to use
+        defaultLen = 16
+        # Using requested symbols & length, generate password
+        secretsGen = secrets.SystemRandom()
+        randomPwd = secretsGen.sample(includedSyms, defaultLen) 
     # Send generated password to display function
     displayPwd(randomPwd)
 
