@@ -13,7 +13,7 @@ punc = string.punctuation
 # Generate Password
 def genPassword():
     # Call symbol function to see which symbol lists to use
-    defaultSyms = includedSymbols()
+    includedSyms = includedSymbols()
     # Call length function to get length to use
     defaultLen = 16
     # Using requested symbols & length, generate password
@@ -29,15 +29,15 @@ def displayPwd(pwd):
 # Get Password Length
 # Confirm included symbols 
 def includedSymbols():
-    includedSyms = str()
+    syms = str()
     # Check what symbols are marked
-    if cDigits == 1: includedSyms += cDigits.get()
-    if cUpper == 1: includedSyms += cUpper.get()
-    if cLower == 1: includedSyms += cLower.get()
-    if cPunc == 1: includedSyms += cPunc.get()
     # Create super list based on what symbols are checked
+    if cDigits == 1: syms += cDigits.get()
+    if cUpper == 1: syms += cUpper.get()
+    if cLower == 1: syms += cLower.get()
+    if cPunc == 1: syms += cPunc.get()
     # Pass super list to genPassword
-    return includedSyms
+    return syms
 
 
 # New Window
