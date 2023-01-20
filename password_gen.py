@@ -33,18 +33,10 @@ def includedSymbols():
     syms = str()
     # Check what symbols are marked
     # Create super list based on what symbols are checked
-    if cDigits == 1:
-        cDigits.set(digits)
-        syms += cDigits.get()
-    if cUpper == 1:
-        cUpper.set(uppercase)
-        syms += cUpper.get()
-    if cLower == 1:
-        cLower.set(lowercase)
-        syms += cLower.get()
-    if cPunc == 1:
-        cPunc.set(punc)
-        syms += cPunc.get()
+    if cDigits.get() == 1: syms += digits
+    if cUpper.get() == 1: syms += uppercase
+    if cLower.get() == 1: syms += lowercase
+    if cPunc.get() == 1: syms += punc
     # Pass super list to genPassword
     return syms
 
