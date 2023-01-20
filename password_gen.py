@@ -8,13 +8,6 @@ uppercase = string.ascii_uppercase
 lowercase = string.ascii_lowercase
 punc = string.punctuation
 
-# Checked variables
-'''cDigits = tk.IntVar()
-cDigits.set("1")
-cUpper = tk.IntVar()
-cLower = tk.IntVar()
-cPunc = tk.IntVar()'''
-
 
 # Event Handlers
 # Generate Password
@@ -111,13 +104,21 @@ symbolsHdrLabel.pack(side=tk.LEFT)
 symbolsFrame = tk.Frame(master=baseFrame, height=100, width=500)
 symbolsFrame.pack(fill=tk.X)
 
+
+# Checked variables
+cDigits = tk.StringVar()
+cDigits.set(digits)
+cUpper = tk.StringVar()
+cUpper.set(uppercase)
+cLower = tk.StringVar()
+cLower.set(lowercase)
+cPunc = tk.StringVar()
+cPunc.set(punc)
+
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
 #Digits
-cDigits = tk.StringVar()
-cDigits.set("1")
 digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", variable=cDigits)
 digitsCBox.pack(side=tk.LEFT)
-print(cDigits.get())
 #Punctuation
 puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", onvalue=1, offvalue=0)
 puncCBox.pack(side=tk.LEFT)
