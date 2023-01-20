@@ -106,14 +106,10 @@ symbolsFrame.pack(fill=tk.X)
 
 
 # Checked variables
-cDigits = tk.StringVar()
-cDigits.set('')
-cUpper = tk.StringVar()
-cUpper.set('')
-cLower = tk.StringVar()
-cLower.set('')
-cPunc = tk.StringVar()
-cPunc.set('')
+cDigits = tk.IntVar()
+cUpper = tk.IntVar()
+cLower = tk.IntVar()
+cPunc = tk.IntVar()
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
 #Digits
