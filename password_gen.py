@@ -17,10 +17,13 @@ def genPassword():
     if includedSyms == '': randomPwd = 'Need to select Symbols!'  
     else:
         # Call length function to get length to use
-        defaultLen = 16
+        defaultLen = 4
         # Using requested symbols & length, generate password
         secretsGen = secrets.SystemRandom()
-        randomPwd = secretsGen.sample(includedSyms, defaultLen) 
+        randomPwd = str()
+        for vals in range(defaultLen): 
+            randomPwd += secretsGen.choice(includedSyms)
+             
     # Send generated password to display function
     displayPwd(randomPwd)
 
