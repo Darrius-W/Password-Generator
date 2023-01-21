@@ -31,6 +31,9 @@ def genPassword():
 def displayPwd(pwd):
     pwdLabel['text'] = pwd
 # Copy Password
+def copyPwd():
+    window.clipboard_clear()
+    window.clipboard_append(pwdLabel['text'])
 # Get Password Length
 def getLength():
     sliderLength = sliderPos.get()
@@ -68,7 +71,7 @@ generatorFrame = tk.Frame(master=baseFrame,
 generatorFrame.pack(fill=tk.X)
 
 # Button: Copy Password
-copyBtn = tk.Button(master=generatorFrame, text='Copy')
+copyBtn = tk.Button(master=generatorFrame, text='Copy', command=copyPwd)
 copyBtn.pack(side=tk.LEFT)
 
 # Label: Display Password
