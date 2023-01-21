@@ -17,11 +17,11 @@ def genPassword():
     if includedSyms == '': randomPwd = 'Need to select Symbols!'  
     else:
         # Call length function to get length to use
-        defaultLen = 4
+        genLength = getLength()
         # Using requested symbols & length, generate password
         secretsGen = secrets.SystemRandom()
         randomPwd = str()
-        for vals in range(defaultLen): 
+        for vals in range(genLength): 
             randomPwd += secretsGen.choice(includedSyms)
              
     # Send generated password to display function
@@ -32,6 +32,9 @@ def displayPwd(pwd):
     pwdLabel['text'] = pwd
 # Copy Password
 # Get Password Length
+def getLength():
+    sliderLength = sliderPos.get()
+    return sliderLength
 # Confirm included symbols 
 def includedSymbols():
     syms = str()
