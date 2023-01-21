@@ -73,7 +73,7 @@ copyBtn.pack(side=tk.LEFT)
 
 # Label: Display Password
 pwdLabel = tk.Label(master=generatorFrame,
-                    width=20,
+                    width=32,
                     text='.............................',
                     bg='dark grey')
 pwdLabel.pack(side=tk.LEFT)
