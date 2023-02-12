@@ -13,3 +13,6 @@ Simply clone the repo, then run the application using:
 ```bash
 python password_gen.py
 ```
+
+## Screenshot
+<img width="244" alt="passwordGenPic" src="https://user-images.githubusercontent.com/86200482/218287719-3a305ada-9b62-4692-9ad2-1cbe60ef571f.PNG">
