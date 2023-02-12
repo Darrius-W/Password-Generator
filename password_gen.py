@@ -70,6 +70,11 @@ generatorFrame = tk.Frame(master=baseFrame,
                           width=500)
 generatorFrame.pack(fill=tk.X)
 
+# Label: Header
+windowHdr = tk.Label(master=generatorFrame,
+                     text='PASSWORD GENERATOR',
+                     font='Helvetica 14 bold').pack(pady=5)
+
 # Button: Copy Password
 copyBtn = tk.Button(master=generatorFrame, text='Copy', command=copyPwd)
 copyBtn.pack(side=tk.LEFT)
