@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 ## Usage
 
-Run the application using:
+Then run the application using:
 ```bash
 python password_gen.py
 ```
