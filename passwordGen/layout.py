@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from PIL import Image, ImageTk
 import logic
 
 
@@ -30,25 +31,40 @@ sliderPos.set(15)
 pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
 
+# Open image
+image = Image.open('Lock.png')
+img=image.resize((33, 33))
+lockImg = ImageTk.PhotoImage(img)
+
 
 
 # Frame: Base frame to hold all other frames
 baseFrame = ttk.Frame(window)
 baseFrame.pack()
 
+
+
+# Frame: Header Frame
+hdrFrame = ttk.Frame(baseFrame)
+hdrFrame.pack()
+
+# Label: Lock image
+imgLabel = ttk.Label(hdrFrame, image=lockImg)
+imgLabel.pack(side=tk.LEFT)
+
 # Label: Header
-headerLabel = ttk.Label(baseFrame, text='Password Generator',
+headerLabel = ttk.Label(hdrFrame, text='Password Generator',
                         font=("Helvetica", 17, "italic"),
-                        padding=(0, 3)).pack()
+                        padding=(0, 4)).pack(side=tk.LEFT)
 
 
 
 # Frame: Generate Password
 generatorFrame = ttk.Frame(baseFrame, padding=(5, 5))
-generatorFrame.pack(fill="both", padx=1, pady=1)
+generatorFrame.pack(fill=tk.BOTH, padx=1, pady=1)
 
 # Button: Copy Password
-copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
+copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd(), width=8)
 copyBtn.pack(side=tk.LEFT, padx=2)
 
 # Label: Display Password
@@ -57,7 +73,7 @@ pwdLabel = ttk.Label(generatorFrame, anchor=tk.CENTER, background='dark grey',
 pwdLabel.pack(side=tk.LEFT)
 
 # Button: Generate New Password
-refreshPwd = ttk.Button(master=generatorFrame, text="Generate",
+refreshPwd = ttk.Button(master=generatorFrame, text="Generate", width=10,
                        command=lambda:logicObj.genPassword(pwdText, sliderPos.get(),
                                                            cUpper.get(), cLower.get(),
                                                            cDigits.get(), cPunc.get()))
