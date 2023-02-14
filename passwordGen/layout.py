@@ -25,27 +25,25 @@ pwdText.set(logicObj.getPassword())
 
 
 # Frame: Base frame to hold all other frames
-baseFrame = tk.LabelFrame(master=window,
+baseFrame = tk.LabelFrame(window,
                      padx=100,
                      pady=100,
                      bg='dark grey', text="Base Frame:")
 baseFrame.pack(fill=tk.BOTH, padx=30, pady=30)
 
 
+
 # Frame: Generate Password
-generatorFrame = tk.LabelFrame(master=baseFrame, text="Generator Frame", padx=15, pady=15)
+generatorFrame = tk.LabelFrame(baseFrame, text="Generator Frame", padx=15, pady=15)
 generatorFrame.pack()
 
-
 # Button: Copy Password
-copyBtn = tk.Button(master=generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
-copyBtn.pack(side=tk.LEFT)
+copyBtn = tk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
+copyBtn.pack(side=tk.LEFT, padx=2)
 
 # Label: Display Password
-pwdLabel = tk.Label(master=generatorFrame,
-                    width=32,
-                    textvariable=pwdText,
-                    bg='dark grey')
+pwdLabel = tk.Label(generatorFrame, anchor=tk.CENTER, bg='dark grey',
+                    textvariable=pwdText, width=33)
 pwdLabel.pack(side=tk.LEFT)
 
 # Button: Generate New Password
@@ -57,7 +55,8 @@ refreshPwd = tk.Button(master=generatorFrame,
                                                            cLower.get(),
                                                            cDigits.get(),
                                                            cPunc.get()))
-refreshPwd.pack(side=tk.LEFT)
+refreshPwd.pack(side=tk.LEFT, padx=1)
+
 
 
 # Frame: Length of Password
