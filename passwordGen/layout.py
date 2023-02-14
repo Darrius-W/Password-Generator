@@ -1,98 +1,98 @@
-import tkinter as tk
+import tkinter as ttk
 import logic
 
 
 # New Window
-window = tk.Tk()
+window = ttk.Tk()
 window.title('Password Generator')
+window.geometry("460x220")
 
 #Objects
 logicObj = logic.Logic()
 
 # Set variables with default values
-cDigits = tk.IntVar()
+cDigits = ttk.IntVar()
 cDigits.set(1)
-cUpper = tk.IntVar()
+cUpper = ttk.IntVar()
 cUpper.set(1)
-cLower = tk.IntVar()
+cLower = ttk.IntVar()
 cLower.set(1)
-cPunc = tk.IntVar()
+cPunc = ttk.IntVar()
 cPunc.set(1)
-sliderPos = tk.IntVar()
+sliderPos = ttk.IntVar()
 sliderPos.set(15)
-pwdText = tk.StringVar()
+pwdText = ttk.StringVar()
 pwdText.set(logicObj.getPassword())
 
 
 # Frame: Base frame to hold all other frames
-baseFrame = tk.LabelFrame(window,
-                     bg='dark grey', text="Base Frame:")
-baseFrame.pack(fill=tk.BOTH, padx=30, pady=30)
+baseFrame = ttk.LabelFrame(window)
+baseFrame.pack(pady=10)
 
 
 
 # Frame: Generate Password
-generatorFrame = tk.LabelFrame(baseFrame, text="Generator Frame", padx=15, pady=15)
-generatorFrame.pack(fill=tk.BOTH)
+generatorFrame = ttk.LabelFrame(baseFrame, padx=15, pady=15)
+generatorFrame.pack(fill=ttk.BOTH, padx=10, pady=10)
 
 # Button: Copy Password
-copyBtn = tk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
-copyBtn.pack(side=tk.LEFT, padx=2)
+copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
+copyBtn.pack(side=ttk.LEFT, padx=2)
 
 # Label: Display Password
-pwdLabel = tk.Label(generatorFrame, anchor=tk.CENTER, bg='dark grey',
+pwdLabel = ttk.Label(generatorFrame, anchor=ttk.CENTER, bg='dark grey',
                     textvariable=pwdText, width=33)
-pwdLabel.pack(side=tk.LEFT)
+pwdLabel.pack(side=ttk.LEFT)
 
 # Button: Generate New Password
-refreshPwd = tk.Button(master=generatorFrame, text="Generate",
+refreshPwd = ttk.Button(master=generatorFrame, text="Generate",
                        command=lambda:logicObj.genPassword(pwdText, sliderPos.get(),
                                                            cUpper.get(), cLower.get(),
                                                            cDigits.get(), cPunc.get()))
-refreshPwd.pack(side=tk.LEFT, padx=1)
+refreshPwd.pack(side=ttk.LEFT, padx=1)
 
 
 
 # Frame: Length of Password
-lengthFrame = tk.LabelFrame(baseFrame, text="Length Frame")
-lengthFrame.pack(fill=tk.BOTH)
+lengthFrame = ttk.LabelFrame(baseFrame)
+lengthFrame.pack(fill=ttk.BOTH, padx=10, pady=10)
 
 # Label: Length Widget Header
-lengthHdrLabel = tk.Label(lengthFrame, text='Length:', padx=5)
-lengthHdrLabel.pack(side=tk.LEFT, padx=12)
+lengthHdrLabel = ttk.Label(lengthFrame, text='Length:', padx=5)
+lengthHdrLabel.pack(side=ttk.LEFT, padx=12)
 
 # Slider: Adjust length of Generated Password
-lengthSlider = tk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
-                        showvalue=True, length=150, variable=sliderPos)
-lengthSlider.pack(side=tk.LEFT)
+lengthSlider = ttk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
+                        showvalue=True, length=180, variable=sliderPos)
+lengthSlider.pack(side=ttk.LEFT)
 
 
 
 # Frame: Symbols Included in Password
-symbolsFrame = tk.LabelFrame(master=baseFrame, text="Symbols Frame")
-symbolsFrame.pack(fill=tk.BOTH)
+symbolsFrame = ttk.LabelFrame(master=baseFrame)
+symbolsFrame.pack(fill=ttk.BOTH, padx=10, pady=10)
 
 # Label: Symbols header label
-symbolsHdrLabel = tk.Label(master=symbolsFrame, text="Symbols:", padx=1)
-symbolsHdrLabel.pack(side=tk.LEFT, padx=12)
+symbolsHdrLabel = ttk.Label(master=symbolsFrame, text="Symbols:", padx=1)
+symbolsHdrLabel.pack(side=ttk.LEFT, padx=15)
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
 #Uppercase
-upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase",
+upperCBox = ttk.Checkbutton(master=symbolsFrame, text="Uppercase",
                            variable=cUpper, onvalue=1, offvalue=0)
-upperCBox.pack(side=tk.LEFT)
+upperCBox.pack(side=ttk.LEFT)
 #Lowercase
-lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase",
+lowerCBox = ttk.Checkbutton(master=symbolsFrame, text="Lowercase",
                            variable=cLower, onvalue=1, offvalue=0)
-lowerCBox.pack(side=tk.LEFT)
+lowerCBox.pack(side=ttk.LEFT)
 #Digits
-digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits",
+digitsCBox = ttk.Checkbutton(master=symbolsFrame, text="Digits",
                             variable=cDigits, onvalue=1, offvalue=0)
-digitsCBox.pack(side=tk.LEFT)
+digitsCBox.pack(side=ttk.LEFT)
 #Punctuation
-puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation",
+puncCBox = ttk.Checkbutton(master=symbolsFrame, text="Punctuation",
                           variable=cPunc, onvalue=1, offvalue=0)
-puncCBox.pack(side=tk.LEFT)
+puncCBox.pack(side=ttk.LEFT)
 
 
 # Execute Mainloop
