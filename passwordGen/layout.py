@@ -58,8 +58,8 @@ lengthFrame = tk.LabelFrame(baseFrame, text="Length Frame")
 lengthFrame.pack(fill=tk.BOTH)
 
 # Label: Length Widget Header
-lengthHdrLabel = tk.Label(lengthFrame, text='Length:')
-lengthHdrLabel.pack(side=tk.LEFT)
+lengthHdrLabel = tk.Label(lengthFrame, text='Length:', padx=5)
+lengthHdrLabel.pack(side=tk.LEFT, padx=12)
 
 # Slider: Adjust length of Generated Password
 lengthSlider = tk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
