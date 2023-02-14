@@ -6,11 +6,12 @@ import logic
 # New Window
 window = tk.Tk()
 window.title('Password Generator')
-window.geometry("460x220")
+window.geometry("500x300")
 
 # Styling
 style = ttk.Style(window)
 style.theme_use("clam")
+window.configure(background='grey')
 
 #Objects
 logicObj = logic.Logic()
@@ -32,14 +33,19 @@ pwdText.set(logicObj.getPassword())
 
 
 # Frame: Base frame to hold all other frames
-baseFrame = ttk.LabelFrame(window)
-baseFrame.pack(pady=10)
+baseFrame = ttk.Frame(window)
+baseFrame.pack()
+
+# Label: Header
+headerLabel = ttk.Label(baseFrame, text='Password Generator',
+                        font=("Helvetica", 17, "italic"),
+                        padding=(0, 3)).pack()
 
 
 
 # Frame: Generate Password
-generatorFrame = ttk.LabelFrame(baseFrame, padding=(15, 15))
-generatorFrame.pack(fill="both", padx=10, pady=10)
+generatorFrame = ttk.Frame(baseFrame, padding=(5, 5))
+generatorFrame.pack(fill="both", padx=1, pady=1)
 
 # Button: Copy Password
 copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
@@ -60,7 +66,7 @@ refreshPwd.pack(side=tk.LEFT, padx=1)
 
 
 # Frame: Length of Password
-lengthFrame = ttk.LabelFrame(baseFrame)
+lengthFrame = ttk.Frame(baseFrame)
 lengthFrame.pack(fill=tk.BOTH, padx=10, pady=10)
 
 # Label: Length Widget Header
@@ -68,18 +74,18 @@ lengthHdrLabel = ttk.Label(lengthFrame, text='Length:', padding=(5,))
 lengthHdrLabel.pack(side=tk.LEFT, padx=12)
 
 # Slider: Adjust length of Generated Password
-lengthSlider = tk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
-                        showvalue=True, length=180, variable=sliderPos)
+lengthSlider = ttk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
+                        length=180, variable=sliderPos)
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Manually input length
-lengthEntry = tk.Entry(lengthFrame, exportselection=0, text='5', textvariable=sliderPos)
+lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos)
 lengthEntry.pack(side=tk.LEFT)
 
 
 
 # Frame: Symbols Included in Password
-symbolsFrame = ttk.LabelFrame(master=baseFrame)
+symbolsFrame = ttk.Frame(master=baseFrame)
 symbolsFrame.pack(fill=tk.BOTH, padx=10, pady=10)
 
 # Label: Symbols header label
