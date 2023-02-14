@@ -42,7 +42,7 @@ lockImg = ImageTk.PhotoImage(img)
 
 
 # Frame: Base frame to hold all other frames
-baseFrame = ttk.Frame(window)
+baseFrame = ttk.LabelFrame(window)
 #baseFrame.grid_rowconfigure(0, weight=1)
 #baseFrame.grid_columnconfigure(0, weight=1)
 baseFrame.place(relx=.5, rely=.5, anchor="center")
@@ -108,7 +108,7 @@ lengthEntry.pack(side=tk.LEFT, padx=3)
 
 
 # Frame: Symbols Included in Password
-symbolsFrame = ttk.Frame(master=baseFrame)
+symbolsFrame = ttk.Frame(baseFrame)
 symbolsFrame.pack(fill=tk.BOTH, padx=10, pady=13)
 
 # Label: Symbols header label
