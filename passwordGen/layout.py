@@ -6,7 +6,7 @@ import logic
 
 # New Window
 window = tk.Tk()
-window.title('Password Generator')
+window.title("Password Generator")
 window.geometry("420x185")
 
 # Styling
@@ -31,7 +31,7 @@ sliderPos.set(15)
 pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
 
-# Open image
+# Open Header image
 image = Image.open('img/Lock.png')
 img=image.resize((33, 33))
 lockImg = ImageTk.PhotoImage(img)
