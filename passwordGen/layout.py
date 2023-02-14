@@ -1,15 +1,13 @@
 import tkinter as tk
 import logic
 
-#Objects
-logicObj = logic.Logic()
-
 
 # New Window
 window = tk.Tk()
 window.title('Password Generator')
-window.resizable(False, False)
 
+#Objects
+logicObj = logic.Logic()
 
 # Set variables with default values
 cDigits = tk.IntVar()
@@ -27,23 +25,17 @@ pwdText.set(logicObj.getPassword())
 
 
 # Frame: Base frame to hold all other frames
-baseFrame = tk.Frame(master=window,
-                     height=300,
-                     width=500,
-                     bg='dark grey')
-baseFrame.pack(fill=tk.BOTH)
+baseFrame = tk.LabelFrame(master=window,
+                     padx=100,
+                     pady=100,
+                     bg='dark grey', text="Base Frame:")
+baseFrame.pack(fill=tk.BOTH, padx=30, pady=30)
 
 
 # Frame: Generate Password
-generatorFrame = tk.Frame(master=baseFrame,
-                          height=100,
-                          width=500)
-generatorFrame.pack(fill=tk.X)
+generatorFrame = tk.LabelFrame(master=baseFrame, text="Generator Frame", padx=15, pady=15)
+generatorFrame.pack()
 
-# Label: Header
-windowHdr = tk.Label(master=generatorFrame,
-                     text='PASSWORD GENERATOR',
-                     font='Helvetica 14 bold').pack(pady=5)
 
 # Button: Copy Password
 copyBtn = tk.Button(master=generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
@@ -57,41 +49,37 @@ pwdLabel = tk.Label(master=generatorFrame,
 pwdLabel.pack(side=tk.LEFT)
 
 # Button: Generate New Password
-refreshPwd = tk.Button(master=generatorFrame, text="Generate", command=lambda:logicObj.genPassword(pwdText, sliderPos.get(), cUpper.get(), cLower.get(), cDigits.get(), cPunc.get()))
+refreshPwd = tk.Button(master=generatorFrame,
+                       text="Generate",
+                       command=lambda:logicObj.genPassword(pwdText,
+                                                           sliderPos.get(),
+                                                           cUpper.get(),
+                                                           cLower.get(),
+                                                           cDigits.get(),
+                                                           cPunc.get()))
 refreshPwd.pack(side=tk.LEFT)
 
 
-# Frame: Header for Length of Password
-lengthHdrFrame = tk.Frame(master=baseFrame, height=50, width=500)
-lengthHdrFrame.pack(fill=tk.X)
+# Frame: Length of Password
+lengthFrame = tk.LabelFrame(master=baseFrame, height=100, width=500, text="Length Frame")
+lengthFrame.pack(fill=tk.X)
 
 # Label: Length Widget Header
-lengthHdrLabel = tk.Label(master=lengthHdrFrame, text='\nLength:')
+lengthHdrLabel = tk.Label(master=lengthFrame, text='\nLength:')
 lengthHdrLabel.pack(side=tk.LEFT)
-
-
-# Frame: Length of Password
-lengthFrame = tk.Frame(master=baseFrame, height=100, width=500)
-lengthFrame.pack(fill=tk.X)
 
 # Slider: Adjust length of Generated Password
 lengthSlider = tk.Scale(master=lengthFrame, from_=1, to=32, orient='horizontal', showvalue=True, length=150, variable=sliderPos)
 lengthSlider.pack(side=tk.LEFT)
 
 
-# Frame: Symbols Frame
-symbolsHdrFrame = tk.Frame(master=baseFrame, height=50, width=500)
-symbolsHdrFrame.pack(fill=tk.X)
-
-# Label: Symbols header label
-symbolsHdrLabel = tk.Label(master=symbolsHdrFrame, text="\nSymbols:")
-symbolsHdrLabel.pack(side=tk.LEFT)
-
-
 # Frame: Symbols Included in Password
-symbolsFrame = tk.Frame(master=baseFrame, height=100, width=500)
+symbolsFrame = tk.LabelFrame(master=baseFrame, height=100, width=500, text="Symbols Frame")
 symbolsFrame.pack(fill=tk.X)
 
+# Label: Symbols header label
+symbolsHdrLabel = tk.Label(master=symbolsFrame, text="\nSymbols:")
+symbolsHdrLabel.pack(side=tk.LEFT)
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
 #Digits
