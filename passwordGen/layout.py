@@ -49,7 +49,7 @@ lockImg = ImageTk.PhotoImage(img)
 
 
 # Frame: Base frame to hold all other frames
-baseFrame = ttk.LabelFrame(window)
+baseFrame = ttk.LabelFrame(window, padding=(10,10,10,14))
 baseFrame.place(relx=.5, rely=.5, anchor="center")
 
 
