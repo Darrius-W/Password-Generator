@@ -32,7 +32,7 @@ pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
 
 # Open image
-image = Image.open('Lock.png')
+image = Image.open('img/Lock.png')
 img=image.resize((33, 33))
 lockImg = ImageTk.PhotoImage(img)
 
