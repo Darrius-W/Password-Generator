@@ -6,7 +6,14 @@ import logic
 
 # New Window
 window = tk.Tk()
+
+# Load Icon 
+ico = Image.open('img\lock_icon.ico')
+photo = ImageTk.PhotoImage(ico)
+window.wm_iconphoto(False, photo)
 window.title("Password Generator")
+
+# Window configuration
 window.geometry("420x185")
 window.grid_rowconfigure(0, weight=1)
 window.grid_columnconfigure(0, weight=1)
@@ -43,11 +50,7 @@ lockImg = ImageTk.PhotoImage(img)
 
 # Frame: Base frame to hold all other frames
 baseFrame = ttk.LabelFrame(window)
-#baseFrame.grid_rowconfigure(0, weight=1)
-#baseFrame.grid_columnconfigure(0, weight=1)
 baseFrame.place(relx=.5, rely=.5, anchor="center")
-#baseFrame.grid()
-#baseFrame.pack(expand=True, fill=tk.BOTH)
 
 
 
