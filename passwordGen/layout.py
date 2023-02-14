@@ -55,13 +55,13 @@ imgLabel.pack(side=tk.LEFT)
 # Label: Header
 headerLabel = ttk.Label(hdrFrame, text='Password Generator',
                         font=("Helvetica", 17, "italic"),
-                        padding=(0, 4)).pack(side=tk.LEFT)
+                        padding=(0, 4)).pack(side=tk.LEFT, pady=3)
 
 
 
 # Frame: Generate Password
 generatorFrame = ttk.Frame(baseFrame, padding=(5, 5))
-generatorFrame.pack(fill=tk.BOTH, padx=1, pady=1)
+generatorFrame.pack(fill=tk.BOTH, padx=10, pady=1)
 
 # Button: Copy Password
 copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd(), width=8)
@@ -102,7 +102,7 @@ lengthEntry.pack(side=tk.LEFT, padx=3)
 
 # Frame: Symbols Included in Password
 symbolsFrame = ttk.Frame(master=baseFrame)
-symbolsFrame.pack(fill=tk.BOTH, padx=10, pady=10)
+symbolsFrame.pack(fill=tk.BOTH, padx=10, pady=13)
 
 # Label: Symbols header label
 symbolsHdrLabel = ttk.Label(master=symbolsFrame, text="Symbols:", padding=(1,))
