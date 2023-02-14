@@ -28,8 +28,7 @@ sliderPos = tk.IntVar()
 sliderPos.set(15)
 pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
-manualLeng = tk.IntVar()
-manualLeng.set(sliderPos.get())
+
 
 
 # Frame: Base frame to hold all other frames
@@ -74,8 +73,7 @@ lengthSlider = tk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Manually input length
-lengthEntry = tk.Entry(lengthFrame, exportselection=0, text='5', textvariable=manualLeng)
-#lengthEntry.insert(0, sliderPos.get())
+lengthEntry = tk.Entry(lengthFrame, exportselection=0, text='5', textvariable=sliderPos)
 lengthEntry.pack(side=tk.LEFT)
 
 
