@@ -38,6 +38,8 @@ cPunc = tk.IntVar()
 cPunc.set(1)
 sliderPos = tk.IntVar()
 sliderPos.set(15)
+manEntry = tk.IntVar()
+manEntry.set(sliderPos.get())
 pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
 
@@ -78,7 +80,7 @@ copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPw
 copyBtn.pack(side=tk.LEFT, padx=2)
 
 # Label: Display Password
-pwdLabel = ttk.Label(generatorFrame, anchor=tk.CENTER, background='dark grey',
+pwdLabel = ttk.Label(generatorFrame, anchor=tk.CENTER, background='white',
                     textvariable=pwdText, width=40)
 pwdLabel.pack(side=tk.LEFT)
 
@@ -105,7 +107,7 @@ lengthSlider = ttk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Manually input length
-lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos, width=4)
+lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos, width=4, xscrollcommand=sliderPos)
 lengthEntry.pack(side=tk.LEFT, padx=3)
 
 
