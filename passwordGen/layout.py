@@ -53,7 +53,7 @@ copyBtn.pack(side=tk.LEFT, padx=2)
 
 # Label: Display Password
 pwdLabel = ttk.Label(generatorFrame, anchor=tk.CENTER, background='dark grey',
-                    textvariable=pwdText, width=33)
+                    textvariable=pwdText, width=40)
 pwdLabel.pack(side=tk.LEFT)
 
 # Button: Generate New Password
@@ -79,8 +79,8 @@ lengthSlider = ttk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Manually input length
-lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos)
-lengthEntry.pack(side=tk.LEFT)
+lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos, width=4)
+lengthEntry.pack(side=tk.LEFT, padx=3)
 
 
 
