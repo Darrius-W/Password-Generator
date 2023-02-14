@@ -69,26 +69,30 @@ lengthSlider.pack(side=tk.LEFT)
 
 
 # Frame: Symbols Included in Password
-symbolsFrame = tk.LabelFrame(master=baseFrame, height=100, width=500, text="Symbols Frame")
-symbolsFrame.pack(fill=tk.X)
+symbolsFrame = tk.LabelFrame(master=baseFrame, text="Symbols Frame")
+symbolsFrame.pack(fill=tk.BOTH)
 
 # Label: Symbols header label
-symbolsHdrLabel = tk.Label(master=symbolsFrame, text="\nSymbols:")
-symbolsHdrLabel.pack(side=tk.LEFT)
+symbolsHdrLabel = tk.Label(master=symbolsFrame, text="Symbols:", padx=1)
+symbolsHdrLabel.pack(side=tk.LEFT, padx=12)
 
 # Checkboxes: Symbols to be Included in Password: Digits, Punctuation, Uppercase, Lowercawse
-#Digits
-digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits", variable=cDigits, onvalue=1, offvalue=0)
-digitsCBox.pack(side=tk.LEFT)
-#Punctuation
-puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation", variable=cPunc, onvalue=1, offvalue=0)
-puncCBox.pack(side=tk.LEFT)
 #Uppercase
-upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase", variable=cUpper, onvalue=1, offvalue=0)
+upperCBox = tk.Checkbutton(master=symbolsFrame, text="Uppercase",
+                           variable=cUpper, onvalue=1, offvalue=0)
 upperCBox.pack(side=tk.LEFT)
 #Lowercase
-lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase", variable=cLower, onvalue=1, offvalue=0)
+lowerCBox = tk.Checkbutton(master=symbolsFrame, text="Lowercase",
+                           variable=cLower, onvalue=1, offvalue=0)
 lowerCBox.pack(side=tk.LEFT)
+#Digits
+digitsCBox = tk.Checkbutton(master=symbolsFrame, text="Digits",
+                            variable=cDigits, onvalue=1, offvalue=0)
+digitsCBox.pack(side=tk.LEFT)
+#Punctuation
+puncCBox = tk.Checkbutton(master=symbolsFrame, text="Punctuation",
+                          variable=cPunc, onvalue=1, offvalue=0)
+puncCBox.pack(side=tk.LEFT)
 
 
 # Execute Mainloop
