@@ -8,6 +8,9 @@ import logic
 window = tk.Tk()
 window.title("Password Generator")
 window.geometry("420x185")
+window.grid_rowconfigure(0, weight=1)
+window.grid_columnconfigure(0, weight=1)
+
 
 # Styling
 style = ttk.Style(window)
@@ -40,13 +43,17 @@ lockImg = ImageTk.PhotoImage(img)
 
 # Frame: Base frame to hold all other frames
 baseFrame = ttk.Frame(window)
-baseFrame.pack()
+#baseFrame.grid_rowconfigure(0, weight=1)
+#baseFrame.grid_columnconfigure(0, weight=1)
+baseFrame.place(relx=.5, rely=.5, anchor="center")
+#baseFrame.grid()
+#baseFrame.pack(expand=True, fill=tk.BOTH)
 
 
 
 # Frame: Header Frame
 hdrFrame = ttk.Frame(baseFrame)
-hdrFrame.pack()
+hdrFrame.grid(row=0, column=0)#.pack(fill=tk.BOTH, padx=75)
 
 # Label: Lock image
 imgLabel = ttk.Label(hdrFrame, image=lockImg)
@@ -61,7 +68,7 @@ headerLabel = ttk.Label(hdrFrame, text='Password Generator',
 
 # Frame: Generate Password
 generatorFrame = ttk.Frame(baseFrame, padding=(5, 5))
-generatorFrame.pack(fill=tk.BOTH, padx=10, pady=1)
+generatorFrame.grid(row=1, column=0)#.pack(padx=10, pady=1, fill=tk.BOTH)
 
 # Button: Copy Password
 copyBtn = ttk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd(), width=8)
@@ -83,7 +90,7 @@ refreshPwd.pack(side=tk.LEFT, padx=1)
 
 # Frame: Length of Password
 lengthFrame = ttk.Frame(baseFrame)
-lengthFrame.pack(fill=tk.BOTH, padx=10, pady=10)
+lengthFrame.grid(row=3, column=0)#.pack(fill=tk.BOTH, padx=10, pady=10)
 
 # Label: Length Widget Header
 lengthHdrLabel = ttk.Label(lengthFrame, text='Length:', padding=(5,))
@@ -102,7 +109,7 @@ lengthEntry.pack(side=tk.LEFT, padx=3)
 
 # Frame: Symbols Included in Password
 symbolsFrame = ttk.Frame(master=baseFrame)
-symbolsFrame.pack(fill=tk.BOTH, padx=10, pady=13)
+symbolsFrame.grid(row=4, column=0)#.pack(fill=tk.BOTH, padx=10, pady=13)
 
 # Label: Symbols header label
 symbolsHdrLabel = ttk.Label(master=symbolsFrame, text="Symbols:", padding=(1,))
