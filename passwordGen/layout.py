@@ -26,8 +26,6 @@ pwdText.set(logicObj.getPassword())
 
 # Frame: Base frame to hold all other frames
 baseFrame = tk.LabelFrame(window,
-                     padx=100,
-                     pady=100,
                      bg='dark grey', text="Base Frame:")
 baseFrame.pack(fill=tk.BOTH, padx=30, pady=30)
 
@@ -35,7 +33,7 @@ baseFrame.pack(fill=tk.BOTH, padx=30, pady=30)
 
 # Frame: Generate Password
 generatorFrame = tk.LabelFrame(baseFrame, text="Generator Frame", padx=15, pady=15)
-generatorFrame.pack()
+generatorFrame.pack(fill=tk.BOTH)
 
 # Button: Copy Password
 copyBtn = tk.Button(generatorFrame, text='Copy', command=lambda:logicObj.copyPwd())
@@ -56,16 +54,18 @@ refreshPwd.pack(side=tk.LEFT, padx=1)
 
 
 # Frame: Length of Password
-lengthFrame = tk.LabelFrame(master=baseFrame, height=100, width=500, text="Length Frame")
-lengthFrame.pack(fill=tk.X)
+lengthFrame = tk.LabelFrame(baseFrame, text="Length Frame")
+lengthFrame.pack(fill=tk.BOTH)
 
 # Label: Length Widget Header
-lengthHdrLabel = tk.Label(master=lengthFrame, text='\nLength:')
+lengthHdrLabel = tk.Label(lengthFrame, text='Length:')
 lengthHdrLabel.pack(side=tk.LEFT)
 
 # Slider: Adjust length of Generated Password
-lengthSlider = tk.Scale(master=lengthFrame, from_=1, to=32, orient='horizontal', showvalue=True, length=150, variable=sliderPos)
+lengthSlider = tk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
+                        showvalue=True, length=150, variable=sliderPos)
 lengthSlider.pack(side=tk.LEFT)
+
 
 
 # Frame: Symbols Included in Password
