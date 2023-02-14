@@ -7,14 +7,14 @@ import logic
 # New Window
 window = tk.Tk()
 window.title('Password Generator')
-window.geometry("500x300")
+window.geometry("420x185")
 
 # Styling
 style = ttk.Style(window)
 style.theme_use("clam")
 window.configure(background='grey')
 
-#Objects
+# Objects
 logicObj = logic.Logic()
 
 # Set variables with default values
