@@ -37,9 +37,7 @@ cLower.set(1)
 cPunc = tk.IntVar()
 cPunc.set(1)
 sliderPos = tk.IntVar()
-sliderPos.set(15)
-manEntry = tk.IntVar()
-manEntry.set(sliderPos.get())
+sliderPos.set('15')
 pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
 
@@ -107,7 +105,7 @@ lengthSlider = ttk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Manually input length
-lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos, width=4, xscrollcommand=sliderPos)
+lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos, width=4)
 lengthEntry.pack(side=tk.LEFT, padx=3)
 
 
