@@ -47,14 +47,10 @@ pwdLabel = tk.Label(generatorFrame, anchor=tk.CENTER, bg='dark grey',
 pwdLabel.pack(side=tk.LEFT)
 
 # Button: Generate New Password
-refreshPwd = tk.Button(master=generatorFrame,
-                       text="Generate",
-                       command=lambda:logicObj.genPassword(pwdText,
-                                                           sliderPos.get(),
-                                                           cUpper.get(),
-                                                           cLower.get(),
-                                                           cDigits.get(),
-                                                           cPunc.get()))
+refreshPwd = tk.Button(master=generatorFrame, text="Generate",
+                       command=lambda:logicObj.genPassword(pwdText, sliderPos.get(),
+                                                           cUpper.get(), cLower.get(),
+                                                           cDigits.get(), cPunc.get()))
 refreshPwd.pack(side=tk.LEFT, padx=1)
 
 
