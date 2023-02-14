@@ -15,7 +15,7 @@ window.grid_columnconfigure(0, weight=1)
 # Styling
 style = ttk.Style(window)
 style.theme_use("clam")
-window.configure(background='grey')
+window.configure(background='#dcdcd4')
 
 # Objects
 logicObj = logic.Logic()
