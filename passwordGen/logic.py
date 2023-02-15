@@ -10,6 +10,7 @@ class Logic:
     # Set Password Length
     def setLength(self, sliderPos):
         self.length = sliderPos
+        print(sliderPos)
         
     # Set included symbols 
     def setIncludedSymbols(self, upperVal, lowerVal, digitVal, puncVal):
@@ -60,3 +61,7 @@ class Logic:
     # Copy password
     def copyPwd(self):
         pyperclip.copy(self.pwd)
+        
+    # Set manEntry val to whole number sliderPos
+    def setManEntry(self, sliderPos, manEntry):
+        manEntry.set(sliderPos.get())

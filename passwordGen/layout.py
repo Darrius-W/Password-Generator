@@ -37,9 +37,12 @@ cLower.set(1)
 cPunc = tk.IntVar()
 cPunc.set(1)
 sliderPos = tk.IntVar()
-sliderPos.set('15')
+sliderPos.set(15)
 pwdText = tk.StringVar()
 pwdText.set(logicObj.getPassword())
+manEntry = tk.IntVar()
+manEntry.set(sliderPos.get())
+
 
 # Open Header image
 image = Image.open('img/Lock.png')
@@ -101,11 +104,11 @@ lengthHdrLabel.pack(side=tk.LEFT, padx=12)
 
 # Slider: Adjust length of Generated Password
 lengthSlider = ttk.Scale(lengthFrame, from_=1, to=32, orient='horizontal',
-                        length=180, variable=sliderPos)
+                        length=180, variable=sliderPos, command=lambda x=None:logicObj.setManEntry(sliderPos, manEntry))
 lengthSlider.pack(side=tk.LEFT)
 
 # Entry: Manually input length
-lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=sliderPos, width=4)
+lengthEntry = ttk.Entry(lengthFrame, exportselection=0, textvariable=manEntry, width=4)
 lengthEntry.pack(side=tk.LEFT, padx=3)
 
 
