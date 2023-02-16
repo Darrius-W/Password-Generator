@@ -6,7 +6,12 @@ Password Generator created using the Tkinter GUI library. This Tool is designed 
 
 ## Usage
 
-Simply clone the repo, then run the application using:
+Install the requirements:
+```bash
+pip install -r requirements.txt
+```
+
+Then, simply run the application using:
 
 ```bash
 python layout.py
