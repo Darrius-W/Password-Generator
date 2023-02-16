@@ -14,4 +14,4 @@ python layout.py
 
 ## Screenshot
 
-<img width="313" alt="pwdGenScreenshot" src="https://user-images.githubusercontent.com/86200482/218883822-b4ca6305-2dae-4a51-9295-9c0e91e4a8c2.PNG">
+<img width="315" alt="pwdGenScreenshot" src="https://user-images.githubusercontent.com/86200482/219227600-bd3dbacc-8645-48e7-8dd4-94d2676ff943.PNG">
