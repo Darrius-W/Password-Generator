@@ -22,10 +22,11 @@ class Logic:
         # clear symbols string
         self.symbols = ''
         
-        if upperVal == 1: self.symbols += upper#uppercase symbols
-        if lowerVal == 1: self.symbols += lower#lowercase symbols
-        if digitVal == 1: self.symbols += digits#digit symbols
-        if puncVal == 1: self.symbols += punc#punc symbols
+        # check if checkboxes are marked
+        if upperVal == 1: self.symbols += upper
+        if lowerVal == 1: self.symbols += lower
+        if digitVal == 1: self.symbols += digits
+        if puncVal == 1: self.symbols += punc
     
     # Generate password
     def genPassword(self, pwdText, sliderPos, upperVal, lowerVal, digitVal, puncVal):
@@ -47,6 +48,7 @@ class Logic:
         # symbols are checked
         else:
             count = 1
+            # create password
             while(count <= self.length):
                 count+=1
                 self.pwd += secretsObj.choice(self.symbols)    
@@ -61,7 +63,7 @@ class Logic:
     def copyPwd(self):
         pyperclip.copy(self.pwd)
         
-    # Set sliderPos to val of manEntry when val entered
-    def focus(self, manEntry, sliderPos):
+    # Set sliderPos to val of dispLabel while slider is moved
+    def matchSlider(self, dispLabel, sliderPos):
         num = int(sliderPos.get())
-        manEntry.set(num)
+        dispLabel.set(num)
