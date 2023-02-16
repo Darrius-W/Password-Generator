@@ -2,7 +2,7 @@
 
 ## General Info
 
-Password Generator created using the Tkinter GUI library. This Tool is designed for users to randomly generate and copy secure passwords with an adjustable slider for passwords up to 32 characters in length, and the added capability for users to decide which symbols to include within the generated password.
+Password Generator created using the Tkinter GUI library. This Tool is designed for users to randomly generate and copy secure passwords with an adjustable slider for passwords up to 32 characters in length, and the capability for users to decide which symbols to include within the generated password.
 
 ## Usage
 
