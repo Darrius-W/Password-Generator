@@ -14,7 +14,7 @@ pip install -r requirements.txt
 Then, simply run the application using:
 
 ```bash
-python layout.py
+python passwordGen/layout.py
 ```
 
 ## Screenshot
