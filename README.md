@@ -1,4 +1,4 @@
-# Tkinter-Password-Generator
+# Password-Generator
 
 ## General Info
 
